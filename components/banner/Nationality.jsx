@@ -2,6 +2,44 @@ import React, { useState, useEffect, useRef } from 'react';
 import styles from './Searchbar.module.css';
  
 const Nationality = () => {
+
+
+  useEffect(() => {
+    if (divRef.current) {
+      const rect = divRef.current.getBoundingClientRect();
+      setDivPosition({ top: rect.top+offset, left: rect.left });
+    }
+  }, []);
+  
+  const [absoluteWidth, setDivWidth] = useState(null);
+   const divRef = useRef(null);
+  const [divPosition, setDivPosition] = useState({ top: 0, left: 0 });
+  const [offset, setOffset] = useState(60);
+
+  
+   useEffect(() => {
+     if (divRef.current) {
+       const absoluteWidth = divRef.current.offsetWidth;
+     }
+   }, []);
+ 
+   const handleResize = () => {
+     if (divRef.current) {
+       const rect = divRef.current.getBoundingClientRect();
+       setDivPosition({ top: rect.top+offset, left: rect.left });
+       setDivWidth(divRef.current.offsetWidth);
+     }
+
+   };
+   useEffect(() => {
+     handleResize(); // Initial call to set the div position
+     window.addEventListener('resize', handleResize);
+ 
+     return () => {
+       window.removeEventListener('resize', handleResize);
+     };
+   }, [offset]);
+
   const [query, setQuery] = useState('');
   const [suggestions, setSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -225,6 +263,7 @@ const Nationality = () => {
   const handleSuggestionClick = (suggestion) => {
     setQuery(suggestion);
     setShowSuggestions(false);
+    handleResize();
   };
 
   const handleClickOutside = (event) => {
@@ -247,11 +286,12 @@ const Nationality = () => {
         className={styles.searchbar}
         placeholder="Nationality"
         value={query}
+        ref={divRef}
         onChange={handleInputChange}
         onClick={() => setShowSuggestions(true)}
       />
       {showSuggestions && (
-        <ul className={`${styles.suggestionlist} ${styles.nationallist}`}>
+        <ul className={`${styles.suggestionlits} ${styles.nationallist}`} style={{ position: 'absolute', top: divPosition.top, left: divPosition.left ,width:absoluteWidth}}>
           {suggestions.map((suggestion, index) => (
             <li
               key={index}

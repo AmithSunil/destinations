@@ -3,10 +3,16 @@
 }
 
 
+@media screen and (max-width: 768px) {
+    .mainbody{
+        margin-top: 5px;
+    }
+}
 .mainbody {
+
     background-color: white;
     border-radius: 6px;
-    margin:0px 2px 0px 5px;
+    margin:5px 2px 0px 5px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
     padding: 0rem 1rem;
     display: flex;
@@ -82,7 +88,7 @@
     width: 100%;
     rotate: 90deg;
     border: solid 1px;
-    
+    max-width: 40px;
 }
 
 .dropdown>hr{

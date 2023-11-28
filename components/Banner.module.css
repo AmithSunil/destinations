@@ -8,6 +8,13 @@
     background-color:var(--primary-color);
 }
 
+@media screen and (max-width: 768px) {
+    .banner{
+        flex-direction: column;
+        padding: 1rem;
+    }
+}
+
 .main{
     margin: 0;
     padding: 2rem;

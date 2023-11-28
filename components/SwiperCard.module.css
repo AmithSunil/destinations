@@ -1,4 +1,25 @@
-
+@media screen and (max-width: 768px) {
+    
+    .image{
+        max-width: 300px;
+    }
+    .swipercard{
+        font-size: small;
+        max-width: 500px;
+        
+    } 
+    .text{
+        max-height: 50px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .tbody{
+        max-width: 400px;
+    }
+    .price2 > button{
+        font-size: 12px;
+    }
+}
 .swipercard {
     background-color: rgb(247, 250, 253);
     border:solid 1px #ccc;
@@ -9,7 +30,7 @@
     display: flex;
     padding: 0px 0px;
     flex-direction: row;
-    width: 100%;
+    width: 700px;
     }
  
 .tbody{
@@ -21,7 +42,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    width:20rem;
+    width:24rem;
 }
 .image {
     margin: 0 ;

@@ -78,13 +78,13 @@ const slides = [
 export default function App() {
   return ( 
     <div className={styles.main}>  
-     <p>OFFERS here beyotch</p>
+     <p>OFFERS </p>
       <Swiper   pagination={{dynamicBullets: true, }} navigation={true} modules={[Navigation,Pagination]} className={styles.swiper} slidesPerView={1} autoplay={{delay: 7000,disableOnInteraction: false,}} >
         {slides.map((slide, index) => {
           return (
             <SwiperSlide className={styles.swiperslide} key={index}>
               <div className={styles.swipercard}>
-                <SwiperCard title={slide.title} price={slide.price} location={slide.location} text={slide.desc} />
+                <SwiperCard className={styles.swipercards} title={slide.title} price={slide.price} location={slide.location} text={slide.desc} />
               </div>
             </SwiperSlide>
           );
