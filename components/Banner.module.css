@@ -1,17 +1,24 @@
+.ban{
+    background-color:var(--primary-color);
+
+}
+
 .banner{
-    padding: .4rem ;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     background-color:var(--primary-color);
 }
 
+.swiper{
+    flex: 1;
+
+}
 @media screen and (max-width: 768px) {
     .banner{
         flex-direction: column;
-        padding: 1rem;
+        padding: 1rem 1rem;
     }
 }
 
@@ -26,7 +33,7 @@
 
 .desc{
     margin: 0;
-    padding-left: 2rem;
+    padding-left:0 ;
     font-size: 25px;
     color: white;
     font-weight: 100;
