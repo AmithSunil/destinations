@@ -5,7 +5,6 @@ export default function Home({ CardsData }) {
   return (
     <>
       <Banner />
-      <Swiper />
       <Destinations CardsData={CardsData} />
     </>
   )

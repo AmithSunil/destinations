@@ -14,11 +14,11 @@ const Banner = () => {
 
       <Swiper />
       <div className={styles.banner}>
-        <Searchbar />
+        {/* <Searchbar />
         <Calender />
         <Nationality />
         <Adults />
- 
+  */}
        </div>
     </div>
   )

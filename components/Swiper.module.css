@@ -35,6 +35,14 @@
     margin-top: 1rem;
   }
   
+  .main>p{
+  
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: left;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+  }
   .swipercard{
     display: flex;
     align-self: center;

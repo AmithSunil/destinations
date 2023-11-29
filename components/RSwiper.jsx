@@ -78,8 +78,8 @@ const slides = [
 export default function RSwiper() {
   return ( 
     <div className={styles.main}>  
-     <p>OFFERS </p>
-      <Swiper   pagination={{dynamicBullets: true, }} navigation={true} modules={[Navigation,Pagination]} className={styles.swiper} slidesPerView={1} autoplay={{delay: 7000,disableOnInteraction: false,}} >
+     {/* <p>Featured Destinations </p> */}
+      <Swiper   pagination={{dynamicBullets: true, }} navigation={false} modules={[Navigation,Pagination]} className={styles.swiper} slidesPerView={1} autoplay={{delay: 7000,disableOnInteraction: false,}} >
         {slides.map((slide, index) => {
           return (
             <SwiperSlide className={styles.swiperslide} key={index}>
