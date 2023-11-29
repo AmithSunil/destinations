@@ -15,7 +15,6 @@ const SwiperCard=({ imageSrc, title, price, location,text })=> {
             <div className={style.tbody}>
                  <h2 className={style.title}>{title}</h2>
                 <p className={style.location}>{location}</p>
-                <p className={style.text}>{text}</p>
                 <div className={style.price_line}>
                     <hr />
                     <div className={style.price2}>

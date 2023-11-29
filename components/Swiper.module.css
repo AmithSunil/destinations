@@ -1,23 +1,17 @@
-@media screen and (max-width: 768px) {
-  .main{
-   max-width: 100%;
-    margin: rem;
-  } 
-
-  
-  .swipercard{
-        max-width: 6em;    
-        }
-
-      
-  
+.swiper {
+  width: 100%;
+  height: 100%;
 }
 
-.swiper {
-    width: 80%;
+  .swiperslide { 
+    width: 100%;
     height: 100%;
-  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
   
+   }
+
   .main>p{
     padding: 0rem 2rem;
     width:80%;
@@ -40,21 +34,11 @@
     align-items: center;
     margin-top: 1rem;
   }
-
-  .swiperslide { 
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 1rem;
-
-  }
   
   .swipercard{
     display: flex;
     align-self: center;
     justify-content: center;
-;
   }
 
   .swiperslide img {

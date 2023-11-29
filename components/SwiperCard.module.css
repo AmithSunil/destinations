@@ -1,37 +1,15 @@
-@media screen and (max-width: 768px) {
-    
-    .image{
-        max-width: 300px;
-    }
-    .swipercard{
-        font-size: small;
-        max-width: 500px;
-        
-    } 
-    .text{
-        max-height: 50px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    .tbody{
-        max-width: 400px;
-    }
-    .price2 > button{
-        font-size: 12px;
-    }
-}
+
 .swipercard {
     background-color: rgb(247, 250, 253);
     border:solid 1px #ccc;
     padding: 0rem;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;    border-radius: 5px;
-    margin:2em 1rem;
- 
+    margin:2em 0rem;
+    width: 100%;
     display: flex;
     padding: 0px 0px;
-    flex-direction: row;
-    width: 700px;
-    }
+    flex-direction: column;
+}
  
 .tbody{
     background-color: rgb(255, 255, 255);
@@ -42,18 +20,18 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    width:24rem;
 }
 .image {
-    margin: 0 ;
-    width: 500px;
+    margin: 0;
     padding: 0;
+    height:200px;
 }
 
 .image>img{
     border-radius: 4px;
     margin: 0;
     padding: 0;
+    height: 200px;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
 
 }
